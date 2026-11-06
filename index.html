@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Frame - Image Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="topbar">
+
+        <a class="brand" href="#top">
+            <span class="brand-mark">F</span>
+            frame<span class="brand-dot">.</span>
+        </a>
+
+        <span class="top-note">
+            A little collection of beautiful things
+        </span>
+
+        <a class="top-link" href="#gallery">
+            Explore Gallery ↗
+        </a>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <main id="top">
+
+        <section class="hero">
+
+            <div class="hero-copy">
+
+                <p class="eyebrow">
+                    THE VISUAL JOURNAL
+                </p>
+
+                <h1>
+                    Moments worth<br>
+                    <em>looking at.</em>
+                </h1>
+
+                <p class="hero-text">
+                    A curated collection of places, details and everyday wonders.
+                    Take your time and explore.
+                </p>
+
+                <a href="#gallery" class="discover-btn">
+                    Discover the collection ↓
+                </a>
+
+            </div>
+
+
+            <div class="hero-image-wrap">
+
+                <img
+                    src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1200"
+                    alt="Mountain Lake"
+                    class="hero-image"
+                >
+
+                <div class="image-caption">
+                    <span>01 / 04</span>
+                    <span>Quiet places, loud feelings</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Gallery Section -->
+        <section class="gallery-section" id="gallery">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">THE COLLECTION</p>
+
+                    <h2>
+                        Explore the gallery<span>.</span>
+                    </h2>
+                </div>
+
+                <p class="section-description">
+                    Find a new favourite in every frame.
+                </p>
+
+            </div>
+
+
+            <!-- Filters -->
+            <div class="toolbar">
+
+                <div class="filters">
+
+                    <button class="filter-btn active" data-filter="all">
+                        All
+                    </button>
+
+                    <button class="filter-btn" data-filter="nature">
+                        Nature
+                    </button>
+
+                    <button class="filter-btn" data-filter="architecture">
+                        Architecture
+                    </button>
+
+                    <button class="filter-btn" data-filter="travel">
+                        Travel
+                    </button>
+
+                    <button class="filter-btn" data-filter="lifestyle">
+                        Lifestyle
+                    </button>
+
+                </div>
+
+
+                <!-- Search -->
+                <label class="search-box">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Search photos..."
+                    >
+
+                </label>
+
+            </div>
+
+
+            <!-- Images -->
+            <div class="gallery-grid" id="galleryGrid"></div>
+
+            <p class="empty-state" id="emptyState" hidden>
+                No images found. Try another search.
+            </p>
+
+
+            <div class="gallery-footer">
+
+                <span id="resultCount">12 photographs</span>
+
+                <span>SCROLL TO WANDER ↓</span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <a class="brand" href="#top">
+            <span class="brand-mark">F</span>
+            frame<span class="brand-dot">.</span>
+        </a>
+
+        <p>Made for the love of beautiful frames.</p>
+
+        <a href="#top" class="back-top">
+            Back to top ↑
+        </a>
+
+    </footer>
+
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+
+        <button class="close-btn" id="closeLightbox">
+            ×
+        </button>
+
+        <button class="lightbox-nav prev-btn" id="prevImage">
+            ‹
+        </button>
+
+        <figure class="lightbox-figure">
+
+            <img id="lightboxImage" src="" alt="">
+
+            <figcaption>
+
+                <span id="lightboxTitle"></span>
+
+                <span id="lightboxCounter"></span>
+
+            </figcaption>
+
+        </figure>
+
+        <button class="lightbox-nav next-btn" id="nextImage">
+            ›
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
